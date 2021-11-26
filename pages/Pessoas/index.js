@@ -29,7 +29,7 @@ const Pessoas = ({navigation}) => {
   return (
   <View style={{display:'flex', flexDirection:'column', alignItems:'center'}}>
     { users && loading === false && users.map((usuario)=> (
-      <View style={{display:'flex', flexDirection: 'row', justifyContent:'flex-start', alignItems:'center', width:150}}>
+      <View key={usuario.login} style={{display:'flex', flexDirection: 'row', justifyContent:'flex-start', alignItems:'center', width:150}}>
         <Image 
           style={{height:50, width:50, borderRadius:50, marginTop:8}} 
           source={{uri:usuario.avatar_url}}
